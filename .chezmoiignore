@@ -1,0 +1,35 @@
+# Repository documentation stays in the repository.
+README.md
+docs
+docs/**
+.gitignore
+
+# Local credentials, application state, and machine-specific chezmoi state.
+.ssh
+.ssh/**
+.gnupg
+.gnupg/**
+.aws
+.aws/**
+.codex
+.codex/**
+.claude
+.claude/**
+.claude.json
+.git-credentials
+.npmrc
+.config/chezmoi
+.config/chezmoi/**
+.config/fish/fish_variables
+.local/share/chezmoi
+.local/share/chezmoi/**
+.local/state
+.local/state/**
+**/.claude
+**/.claude/**
+**/.env
+**/.env.*
+**/*_history
+**/*.swp
+**/*.swo
+**/*~

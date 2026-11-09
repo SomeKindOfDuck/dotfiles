@@ -10,6 +10,7 @@ opt.signcolumn = "yes"
 opt.number = true
 vim.wo.number = true
 vim.wo.relativenumber = true
+vim.opt.splitbelow = true
 opt.cursorline = true
 opt.cursorcolumn = true
 opt.swapfile = false

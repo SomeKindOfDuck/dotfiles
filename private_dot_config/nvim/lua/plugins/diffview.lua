@@ -1,9 +1,9 @@
 return {
   "sindrets/diffview.nvim",
+  event = "VeryLazy",
 
   config = function ()
     require("diffview").setup({
-      vim.keymap.set("n", "-d", "<CMD>DiffviewOpen<CR>"),
       hooks = {
         view_opened = function(view)
           vim.keymap.set("n", "-d", "<CMD>DiffviewClose<CR>")
@@ -13,5 +13,7 @@ return {
         end,
       }
     })
+
+    vim.keymap.set("n", "-d", "<CMD>DiffviewOpen<CR>")
   end
 }

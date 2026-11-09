@@ -13,6 +13,8 @@ return {
       vim.cmd("highlight EndOfBuffer ctermbg=none guibg=none")
       vim.cmd("highlight LineNr ctermbg=none guibg=none")
       vim.cmd("highlight SignColumn ctermbg=none guibg=none")
+      vim.cmd("highlight NormalFloat ctermbg=none guibg=none")
+      vim.cmd("highlight FloatBorder ctermbg=none guibg=none")
     end
   },
 }

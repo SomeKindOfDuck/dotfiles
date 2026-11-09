@@ -1,0 +1,7 @@
+[user]
+	email = from.this.ridiculous.loop@gmail.com
+	name = 7cm-diameter
+[credential]
+	helper = cache
+[init]
+	defaultBranch = main

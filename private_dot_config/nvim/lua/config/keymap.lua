@@ -1,13 +1,12 @@
 -- general settings
 vim.g.mapleader = " "
-set = vim.keymap.set
+local set = vim.keymap.set
+local opts = { noremap = true, silent = true }
 
 -- yank settings
 set("n", "x", '"_x', opts)
 set("n", "py", "\"0p")
 set("n", "pd", "p")
-
-set("n", "x", '"_x', opts)
 
 -- move cursor
 set("n", "j", "gj")

@@ -1,23 +1,30 @@
 return {
   "lukas-reineke/indent-blankline.nvim",
-  config = function ()
-    require("indent_blankline").setup({
-      space_char_blankline = " ",
-      char_highlight_list = {
-          "IndentBlanklineIndent1",
-          "IndentBlanklineIndent2",
-          "IndentBlanklineIndent3",
-          "IndentBlanklineIndent4",
-          "IndentBlanklineIndent5",
-          "IndentBlanklineIndent6",
-      },
-    })
+  main = "ibl",
+  event = "VeryLazy",
+  opts = {},
 
-    vim.cmd [[highlight IndentBlanklineIndent1 guifg=#ff757f gui=nocombine]]
-    vim.cmd [[highlight IndentBlanklineIndent2 guifg=#ffc777 gui=nocombine]]
-    vim.cmd [[highlight IndentBlanklineIndent3 guifg=#c3e88d gui=nocombine]]
-    vim.cmd [[highlight IndentBlanklineIndent4 guifg=#86e1fc gui=nocombine]]
-    vim.cmd [[highlight IndentBlanklineIndent5 guifg=#82aaff gui=nocombine]]
-    vim.cmd [[highlight IndentBlanklineIndent6 guifg=#c099ff gui=nocombine]]
+  config = function ()
+    local highlight = {
+      "RainbowRed",
+      "RainbowOrange",
+      "RainbowGreen",
+      "RainbowBlue",
+      "RainbowViolet",
+      "RainbowCyan",
+    }
+
+    local hooks = require("ibl.hooks")
+
+    hooks.register(hooks.type.HIGHLIGHT_SETUP, function ()
+      vim.api.nvim_set_hl(0, "RainbowRed", {fg = "#FF757F"})
+      vim.api.nvim_set_hl(0, "RainbowOrange", {fg = "#FFC777"})
+      vim.api.nvim_set_hl(0, "RainbowGreen", {fg = "#C3E88D"})
+      vim.api.nvim_set_hl(0, "RainbowBlue", {fg = "#82AAFF"})
+      vim.api.nvim_set_hl(0, "RainbowViolet", {fg = "#C099FF"})
+      vim.api.nvim_set_hl(0, "RainbowCyan", {fg = "#86E1FC"})
+    end)
+
+    require("ibl").setup({ indent = { highlight = highlight } })
   end
 }

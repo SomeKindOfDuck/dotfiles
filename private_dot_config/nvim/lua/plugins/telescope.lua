@@ -2,6 +2,7 @@ local set = vim.keymap.set
 
 return {
   "nvim-telescope/telescope.nvim",
+  event = "VeryLazy",
 
   dependencies = {
     'nvim-lua/plenary.nvim',
@@ -90,13 +91,13 @@ return {
         coc = { prefer_location = false },
         file_browser = { respect_gitignore = false }
       },
-
-      -- settings for coc
-      set("n", "gd", "<CMD>Telescope coc definitions<CR>", { silent = true }),
-      set("n", "gt", "<CMD>Telescope coc type_definitions<CR>", { silent = true }),
-      set("n", "gr", "<CMD>Telescope coc references<CR>", { silent = true }),
-      set("n", "<leader>fd", "<CMD>Telescope coc diagnostics<CR>", { silent = true })
     }
+
+    -- settings for coc
+    set("n", "gd", "<CMD>Telescope coc definitions<CR>", { silent = true })
+    set("n", "gt", "<CMD>Telescope coc type_definitions<CR>", { silent = true })
+    set("n", "gr", "<CMD>Telescope coc references<CR>", { silent = true })
+    set("n", "<leader>fd", "<CMD>Telescope coc diagnostics<CR>", { silent = true })
 
     require("telescope").load_extension("coc")
     require("telescope").load_extension("file_browser")

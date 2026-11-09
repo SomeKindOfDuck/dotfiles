@@ -37,3 +37,23 @@ function venv_exists
     end
   end
 end
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /home/duck/.pyenv/versions/anaconda3-2024.10-1/bin/conda
+    eval /home/duck/.pyenv/versions/anaconda3-2024.10-1/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/home/duck/.pyenv/versions/anaconda3-2024.10-1/etc/fish/conf.d/conda.fish"
+        . "/home/duck/.pyenv/versions/anaconda3-2024.10-1/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/home/duck/.pyenv/versions/anaconda3-2024.10-1/bin" $PATH
+    end
+end
+# Do not auto-activate conda base
+if status is-interactive
+    conda deactivate 2>/dev/null
+end
+# <<< conda initialize <<<
+
+set -x QT_QPA_PLATFORM xcb
+direnv hook fish | source

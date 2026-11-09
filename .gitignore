@@ -1,0 +1,9 @@
+# Editor artifacts and local AI tool permissions, including chezmoi-encoded names.
+*.swp
+*.swo
+*~
+**/.claude/
+**/dot_claude/
+**/private_dot_claude/
+.env
+.env.*

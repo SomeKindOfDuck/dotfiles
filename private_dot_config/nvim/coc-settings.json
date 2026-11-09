@@ -13,5 +13,9 @@
   "pyright.inlayHints.variableTypes": false,
   "pyright.inlayHints.parameterTypes": false,
   "pyright.inlayHints.functionReturnTypes": false,
-  "pyright.organizeimports.provider": "isort"
+  "pyright.organizeimports.provider": "isort",
+  "julia.lint.pirates": false,
+  "json.schemaDownload.trustedDomains": {
+    "https://www.schemastore.org": true
+  },
 }

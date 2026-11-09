@@ -4,6 +4,7 @@ return {
   "neoclide/coc.nvim",
   branch = "master",
   build = "yarn install --frozen-lockfile",
+  event = "VeryLazy",
 
   config = function()
     local opts = { silent = true, noremap = true, expr = true, replace_keycodes = false }

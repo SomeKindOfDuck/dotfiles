@@ -1,5 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  event = "VeryLazy",
   build = function ()
     require("nvim-treesitter.install").update({ with_sync = true })
   end,
@@ -10,7 +11,7 @@ return {
       sync_install = true,
       auto_install = true,
       highlight = { enable = true },
-      indent = { enable = true },
+      indent = { enable = true, disable = { "r" } },
     })
    end
 }
